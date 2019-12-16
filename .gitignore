@@ -9,6 +9,7 @@ Gemfile.lock
 npm-debug.log
 *.js.map
 maps
+*.iml
 
 # OS Generated files #
 ######################
@@ -29,6 +30,7 @@ Thumbs.db
 ##########
 _site/
 .jekyll-metadata
+*.lock
 
 # Ruby #
 ########
