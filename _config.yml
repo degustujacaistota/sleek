@@ -1,52 +1,22 @@
 # SITE CONFIGURATION
-title: Sleek # your site title
-author: GitHub User # You :P
-description: > # Meta description of Homepage
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/sleek" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-
-# SEO PLUGIN
-social:
-  name: Your Name
-  links:
-    - https://twitter.com/BenBalter
-    - https://www.facebook.com/ben.balter
-    - https://www.linkedin.com/in/BenBalter
-    - https://plus.google.com/+BenBalter
-    - https://github.com/benbalter
-    - https://keybase.io/benbalter
-
-# THEME SETTINGS
-navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
-
-tagline: >
-  Modern Jekyll theme focused on speed performance &amp; SEO best practices
-
-hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
-
-email: your-email@domain.com # email for form submission
-
-twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
-github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
-instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
-
-disqus:
-  shortname: janczizikow # to enable comments replace with your_disqus_shortname
-
-# google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
-
-service_worker: true
-
-# BUILD SETTINGS
 markdown: kramdown
-highlighter: rouge # or pygments or null
-# theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
+highlighter: rouge
+
+baseurl: "/sleek" # the subpath of your site, e.g. /blog
+permalink: /:title/
+
+future: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  startings: [head, body]
+
 exclude:
   - README.md
   - node_modules
@@ -60,12 +30,130 @@ exclude:
   - gulpfile.js
   - sleek.jpg
 
-include: ['_pages']
-permalink: /:title/
+# COLLECTIONS
+#collections_dir: docs
+collections:
+  categories:
+    output: true
+  tags:
+    output: true
+  points:
+    output: true
+  restaurants:
+    output: true
+  locations:
+    output: true
 
-compress_html:
-  clippings: all
-
+# PLUGINS
 plugins:
-  - jekyll-sitemap
+  - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-sass-converter
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+
+# jekyll-commonmark-ghpages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+# jekyll-mentions
+jekyll-mentions:
+  base_url: https://www.instagram.com
+
+# jekyll-optional-front-matter
+include:
+  - '_pages'
+
+# jekyll-paginate
+paginate:         6
+paginate_path:    '/:num'
+
+# jekyll-remote-theme
+#remote_theme: degustujacaistota/sleek
+
+# jekyll-seo-tag
+title: Degustująca Istota # your site title
+tagline: >
+  “Money, pardon the expression, is like manure. It's not worth a thing unless it's spread around, encouraging young things to grow.”
+  - "Hello, Dolly!"
+description: > # Meta description of Homepage
+  Tester's blog about restaurants. Reviews of a dishes degustations. Ranking of the best restaurants.
+url: 'https://degustujacaistota.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
+author: Danuta Irena Żabińska # You :P
+logo: /assets/img/logo.jpg
+
+social:
+  name: Danuta Irena Żabińska # You :P
+  links:
+    - https://www.facebook.com/Degustująca-Istota-309847352979817
+    - https://www.instagram.com/degustujacaistota/
+    - https://twitter.com/degustujaca
+    - https://www.linkedin.com/in/danuta-żabińska-94a74410b
+    - https://github.com/degustujacaistota
+#    - https://plus.google.com/+BenBalter
+#    - https://keybase.io/benbalter
+
+# THEME SETTINGS
+email: degustujaca.istota@gmail.com # email for form submission
+hero_img: main.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+img_url: 'https://degustujacaistota.github.io/img'
+
+service_worker: false
+
+locale: en-US
+lang: en-US
+
+lang-main: pl
+lang-current: sleek
+langs:
+  - sleek
+  - en
+  - pl
+
+# google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
+# google_analytics: UA-XXXXXXXXX-X
+
+#disqus:
+#  shortname: janczizikow # to enable comments replace with your_disqus_shortname
+
+# NAVIGATION LINKS
+navigation:
+  - {name: 'About', link: '/about'}
+  - {name: 'Search', link: '/search-jekyll-simple'}
+  - {name: 'Categories', link: '/categories'}
+  - {name: 'Tags', link: '/tags'}
+  - {name: 'Locations', link: '/locations'}
+  - {name: 'Restaurants', link: '/restaurants'}
+
+# SOCIAL LINKS
+social_links:
+  instagram: degustujacaistota
+  facebook: Degustująca-Istota-309847352979817
+  twitter: degustujaca
+  linkedin: danuta-żabińska-94a74410b
+  github:  degustujacaistota
+  rss: rss
+  # dribbble: jekyll
+  # flickr:   jekyll
+  # pinterest: jekyll
+  # youtube: jekyll
+  # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+  # youtube_channel_name: CloudCannon
+  # telegram: jekyll
+  # googleplus: +jekyll
+  # microdotblog: jekyll
+  # keybase: jekyll

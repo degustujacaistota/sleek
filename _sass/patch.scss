@@ -1,0 +1,32 @@
+.header__logo .header__logo--container {
+  width: 170px;
+}
+.header__inner {
+  height: 5.75em;
+}
+.hero::before {
+  background: rgba(50,8,99,0.7);
+}
+.hero--small::before {
+  background: rgba(88,5,99,1.8);
+}
+p {
+  text-indent: 2em;
+}
+.tag {
+  padding: 0px 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  line-height: 20px;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.8);
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 100px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@import
+  patch/tags
