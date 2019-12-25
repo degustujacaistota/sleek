@@ -1,0 +1,7 @@
+{% assign name = include.name %}
+
+<dt id="{{ name }}">
+    <h{{ include.h }}>
+        <a href="{{ site.baseurl }}/locations/{{ name }}">{{ name | capitalize }}</a>
+    </h{{ include.h }}>
+</dt>

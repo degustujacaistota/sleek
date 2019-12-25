@@ -1,0 +1,51 @@
+<div class="post-content">
+
+  {% assign tag = page.restaurant %}
+  {% if tag %}
+  <div class="tags post-tag">
+    {{ site.data.ui-text[site.locale].restaurant | default: "Restaurant" }}:
+    <a class="tag" href="{{ site.baseurl }}/restaurants/{{ tag }}">{{ tag }}</a>
+  </div>
+  {% endif %}
+
+  {% assign tags = page.restaurants | split: " " | sort %}
+  {% if tags.size > 0 %}
+  <div class="tags post-tag">
+    {{ site.data.ui-text[site.locale].restaurants | default: "Restaurants" }}:
+    {% for tag in tags %}
+    <a class="tag" href="{{ site.baseurl }}/restaurants/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% assign tags = page.location | split: " " | sort %}
+  {% if tags.size > 0 %}
+  <div class="tags post-tag">
+    {{ site.data.ui-text[site.locale].location | default: "Location" }}:
+    {% for tag in tags %}
+    <a class="tag" href="{{ site.baseurl }}/locations/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% assign tags = page.tags | sort %}
+  {% if tags.size > 0 %}
+  <div class="tags post-tag">
+    {{ site.data.ui-text[site.locale].tags | default: "Tags" }}:
+    {% for tag in tags %}
+    <a class="tag" href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% assign tags = page.categories | sort %}
+  {% if tags.size > 0 %}
+  <div class="tags post-tag">
+    {{ site.data.ui-text[site.locale].tags | default: "Categories" }}:
+    {% for tag in tags %}
+    <a class="tag" href="{{ site.baseurl }}/categories/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>

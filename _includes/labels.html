@@ -1,0 +1,25 @@
+{% assign p = include.p %}
+
+{% assign points = p.points %}
+{% if points %}
+  <a href="{{site.baseurl}}/ranking/#{{points|slugize}}" class="label"> {{ points }} </a>
+{% endif %}
+
+{% assign category = p.restaurant %}
+{% if category %}
+  <a href="{{site.baseurl}}/restaurants/{{category|slugize}}" class="label"> {{ category }} </a>
+{% endif %}
+
+{% assign categories = p.location | split: " "%}
+{% if categories %}
+{% for category in categories %}
+  <a href="{{site.baseurl}}/locations/{{category|slugize}}" class="label"> {{ category }} </a>
+{% endfor %}
+{% endif %}
+
+{% assign categories = p.categories %}
+{% if categories %}
+{% for category in categories %}
+  <a href="{{site.baseurl}}/categories/{{category|slugize}}" class="label"> {{ category }} </a>
+{% endfor %}
+{% endif %}
