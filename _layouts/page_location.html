@@ -1,8 +1,9 @@
 ---
 layout: compress
+title: {{ page.tag }}
 ---
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
   {% include head.html %}
 
@@ -19,30 +20,27 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
+    <div class="hero--small">
       <div class="hero__wrap">
-        <h1 class="hero__title">{{ site.title | escape }}</h1>
-        <p class="hero__meta">{{ site.tagline }}</p>
+        <h1 class="hero__title">Restauracja: {{ page.title }}</h1>
       </div>
     </div>
-
     <main class="site__content">
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+            {% for post in site.posts %}
+            {% if post.location == page.location %}
+            {% include card.html %}
 
-            {% for post in paginator.posts %}
-              {% include card.html %}
+            {% endif %}
             {% endfor %}
-
           </div>
         </div>
       </section>
     </main>
 
-    {% include pagination.html %}
-
-    {% include footer.html %}
+  {% include footer.html %}
 
   </body>
 
