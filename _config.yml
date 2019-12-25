@@ -6,7 +6,7 @@ description: > # Meta description of Homepage
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/sleek" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://degustujacaistota.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
@@ -24,17 +24,16 @@ navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'About', link: '/about'}
   - {name: 'Contact', link: '/contact'}
+  - {name: 'Search', link: '/search-jekyll-simple'}
+  - {name: 'Categories', link: '/categories'}
+  - {name: 'Tags', link: '/tags'}
 
 tagline: >
   Modern Jekyll theme focused on speed performance &amp; SEO best practices
 
-hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+hero_img: main.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 email: your-email@domain.com # email for form submission
-
-twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
-github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
-instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
 
 disqus:
   shortname: janczizikow # to enable comments replace with your_disqus_shortname
@@ -42,6 +41,31 @@ disqus:
 # google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
 
 service_worker: true
+
+# SOCIAL
+facebook_username: Degustująca-Istota-309847352979817
+twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
+github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
+instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+
+social_links:
+  rss: rss
+  facebook: Degustująca-Istota-309847352979817
+  instagram: degustujacaistota
+  twitter: degustujaca
+  linkedin: danuta-żabińska-94a74410b
+  github:  DanutaZabinska
+  # dribbble: jekyll
+  # flickr:   jekyll
+  # pinterest: jekyll
+  # youtube: jekyll
+  # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+  # youtube_channel_name: CloudCannon
+  # telegram: jekyll
+  # googleplus: +jekyll
+  # microdotblog: jekyll
+  # keybase: jekyll
+
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -60,12 +84,48 @@ exclude:
   - gulpfile.js
   - sleek.jpg
 
-include: ['_pages']
 permalink: /:title/
 
 compress_html:
   clippings: all
 
 plugins:
-  - jekyll-sitemap
+  - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-sass-converter
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+
+# jekyll-commonmark-ghpages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+# jekyll-mentions
+jekyll-mentions:
+  base_url: https://twitter.com
+
+# jekyll-optional-front-matter
+include:
+  - '_pages'
+  - docs/CONTRIBUTING.md
+
+# jekyll-paginate
+paginate:         6
+paginate_path:    '/:num'
+
+# jekyll-remote-theme
+#remote_theme: degustujacaistota/sleek
