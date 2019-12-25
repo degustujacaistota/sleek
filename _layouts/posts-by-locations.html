@@ -1,0 +1,52 @@
+---
+layout: posts
+title: Locations
+permalink: /locations/
+description: Posts by locations
+---
+{% assign locations = site.locations  | sort: "location" %}
+
+<div class="posts archive-group">
+  <dl class="posts-nav">
+
+    {% assign l1s = locations | where_exp: "l", "l.parent == nil" %}
+    {% for l1 in l1s %}
+
+    {% assign name = l1.location %}
+    {% assign l2s = locations | where_exp: "l", "l.parent == name" %}
+    {% if l2s.size > 0 %}
+
+    {% include location-dt.html name=name h="1" %}
+    <dd>
+
+      <dl class="posts-nav">
+        {% for l2 in l2s %}
+        {% assign name = l2.location %}
+        {% assign l3s = locations | where_exp: "l", "l.parent == name" %}
+
+        {% include location-dt.html name=name h="2" %}
+        <dd>
+
+          {% if l3s.size == 0 %}
+          {% include location-posts.html name=name %}
+          {% else %}
+          <dl class="posts-nav">
+            {% for l3 in l3s %}
+            {% assign name = l3.location %}
+            {% include location-dt.html name=name h="3"%}
+            <dd>
+              {% include location-posts.html name=name %}
+            </dd>
+            {% endfor %}
+          </dl>
+          {% endif %}
+
+        </dd>
+        {% endfor %}
+      </dl>
+
+    </dd>
+    {% endif %}
+    {% endfor %}
+  </dl>
+</div>

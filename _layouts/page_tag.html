@@ -1,0 +1,9 @@
+---
+layout: collections
+title: 'Tag: {{ page.tag }}'
+---
+{% for post in site.posts %}
+{% if post.tags contains page.tag %}
+{% include card.html %}
+{% endif %}
+{% endfor %}

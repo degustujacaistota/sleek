@@ -1,0 +1,45 @@
+---
+layout: posts
+title: Ranking
+permalink: /ranking/
+description: Ranking
+---
+{% include group-by-array.html collection=site.posts field="points" %}
+<div class="posts archive-group">
+  <table style="width:100%">
+    <tr>
+      <th>{{ site.data.ui-text[site.locale].points | default: "Points" }}</th>
+      <th>{{ site.data.ui-text[site.locale].restaurants | default: "Restaurants" }}</th>
+    </tr>
+    {% assign names = group_names | reverse | compact %}
+    {% for name in names %}
+    {% assign posts = site.posts | where: "points", nil %}
+    <tr id="{{ name }}">
+      <td>
+        <h2>
+          {{ name }}
+        </h2>
+      </td>
+      <td>
+        <ul>
+          {% for post in posts %}
+          {% assign points = post.points | strip %}
+          {% if points == name %}
+          <li>
+            <a class="posts-nav-item" href="{{ post.url | relative_url }}">
+            <span class="posts-nav-item-date">
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+            </span>
+              {{ post.title }}
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

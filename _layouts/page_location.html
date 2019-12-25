@@ -1,0 +1,10 @@
+---
+layout: collections
+title: '{{ site.data.ui-text[site.locale].location | default: "Location" }}: {{ page.tag }}'
+---
+{% for post in site.posts %}
+{% assign locations = post.location | split: " " %}
+{% if locations contains page.location %}
+{% include card.html %}
+{% endif %}
+{% endfor %}

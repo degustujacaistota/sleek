@@ -1,0 +1,10 @@
+---
+layout: collections
+title: '{{ site.data.ui-text[site.locale].category | default: "Category" }}: {{ page.category }}'
+---
+{% for post in site.posts %}
+{% if post.category == page.category %}
+{% include card.html %}
+{% endif %}
+{% endfor %}
+

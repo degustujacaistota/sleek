@@ -1,0 +1,10 @@
+---
+layout: collections
+title: '{{ site.data.ui-text[site.locale].restaurant | default: "Restaurant" }}: {{ page.tag }}'
+---
+{% for post in site.posts %}
+{% assign restaurants = post.restaurants | split: " " %}
+{% if restaurants contains page.restaurant or post.restaurant == page.restaurant %}
+{% include card.html %}
+{% endif %}
+{% endfor %}
