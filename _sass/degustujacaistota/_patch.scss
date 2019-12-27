@@ -1,0 +1,18 @@
+p {
+  text-indent: 2em;
+}
+
+.tag {
+  padding: 0px 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  line-height: 20px;
+  font-size: .75rem;
+//   text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.8);
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 100px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
