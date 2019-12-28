@@ -85,6 +85,7 @@ description: > # Meta description of Homepage
 url: "https://degustujacaistota.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 author: Danuta Irena Żabińska # You :P
 logo: /assets/img/main.jpg
+
 social:
   name: Danuta Irena Żabińska # You :P
   links:
