@@ -1,0 +1,38 @@
+# User interface text and labels
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  previous        : Previous
+  next            : Next
+  categories      : Categories
+  tags            : Tags
+  location        : Location
+  locations       : Locations
+  restaurant      : Restaurant
+  restaurants     : Restaurants
+  points          : Points
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+
+# Polish
+# ------
+pl: &DEFAULT_PL
+  previous        : Poprzedni
+  next            : Następny
+  categories      : Kategorie
+  tags            : Tagi
+  location        : Lokalizacja
+  locations       : Lokalizacje
+  restaurant      : Restauracja
+  restaurants     : Restauracje
+  points          : Punkty
+pl-PL:
+  <<: *DEFAULT_PL
