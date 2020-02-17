@@ -21,14 +21,14 @@
 
           {% if site.lang-current == site.lang-main %}
           <a class="header__link" href="/{{ lang }}{{ page.url }}" itemprop="url">
-            <span itemprop="name">{{ lang | upcase }}</span>
+            <span itemprop="name">{{ page.url | upcase }}</span>
           </a>
           {% elsif lang == site.lang-main %}
-          <a class="header__link" href="{{ page.url | remove_first: site.lang-current }}" itemprop="url">
+          <a class="header__link" href="{{ page.url }}" itemprop="url">
             <span itemprop="name">{{ lang | upcase }}</span>
           </a>
           {% else %}
-          <a class="header__link" href="/{{ lang }}{{ page.url | remove_first: site.lang-current }}" itemprop="url">
+          <a class="header__link" href="/{{ lang }}{{ page.url }}" itemprop="url">
             <span itemprop="name">{{ lang | upcase }}</span>
           </a>
           {% endif %}
