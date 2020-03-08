@@ -86,12 +86,14 @@ paginate_path:    '/:num'
 #remote_theme: degustujacaistota/sleek
 
 # jekyll-seo-tag
-title: Degustująca Istota # your site title
+title: Fine Dining and other culinary wonders # your site title
 tagline: >
-  “Money, pardon the expression, is like manure. It's not worth a thing unless it's spread around, encouraging young things to grow.”
-  - "Hello, Dolly!"
+  Fine Dining is Culinary Art, which is my passion.
+   However, man does not live by art alone.
 description: > # Meta description of Homepage
-  Tester's blog about restaurants. Reviews of a dishes degustations. Ranking of the best restaurants.
+  Fine Dining Restaurants by the Degustująca Istota.
+      Tasting dinners, à la Carte dishes also in restaurants with the Michelin Guide recommendation, but not only.
+      There is also place for several culinary pearls outside the world of Fine Dining.
 url: 'https://degustujacaistota.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
 author: Danuta Irena Żabińska # You :P
 logo: /assets/img/logo.jpg
@@ -109,7 +111,7 @@ social:
 
 # THEME SETTINGS
 email: degustujaca.istota@gmail.com # email for form submission
-hero_img: main.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+hero_img: posts/main.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 img_url: 'https://degustujacaistota.github.io/img'
 
 service_worker: false
