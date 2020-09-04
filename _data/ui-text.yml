@@ -12,6 +12,12 @@ en: &DEFAULT_EN
   restaurant      : Restaurant
   restaurants     : Restaurants
   points          : Points
+  cookie-notice         : The blog, Degustowanie Istota about culinary arts Fine Dining, stores cookies for statistical and functional purposes.
+  cookie-notice-accept  : Yes, I know and accept
+  cookie-notice-privacy : I want to know more
+  cookie-notice-show    : Show a warning
+  cookie-notice-ga      : to properly analyze website traffic
+  cookie-notice-di      : in order not to display information about cookies each time.
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -34,5 +40,11 @@ pl: &DEFAULT_PL
   restaurant      : Restauracja
   restaurants     : Restauracje
   points          : Punkty
+  cookie-notice         : Blog, Degustująca Istota o sztuce kulinarnej Fine Dining przechowuje pliki cookies (tzw. ciasteczka) w celach statystycznych i funkcjonalnych.
+  cookie-notice-accept  : Tak wiem i akceptuję
+  cookie-notice-privacy : Chcę dowiedzieć się więcej
+  cookie-notice-show    : Pokaż ostrzeżenie
+  cookie-notice-ga      : do poprawnego analizowania ruchu strony
+  cookie-notice-di      : po to żeby za każdym razem nie wyświetlać informacji o plikach cookies.
 pl-PL:
   <<: *DEFAULT_PL
