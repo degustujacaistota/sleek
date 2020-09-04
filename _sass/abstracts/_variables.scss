@@ -1,3 +1,4 @@
+$eggplant-color: #580563;
 $primary: #277cea !default;
 $secondary: #ff6161 !default;
 $border: #ededed !default;
@@ -11,11 +12,10 @@ $light-bg-color: #f9f9f9;
 $text-color: #343851;
 $heading-color: #313237;
 $link-color: $primary;
-$button-dark: #222325;
-$dark-light: #313237;
+$button-dark: $eggplant-color;
+$dark-light: $eggplant-color;
 $outline: #dbdbdb;
 $grey: #838c8d;
-$eggplant-color: #580563;
 
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 
