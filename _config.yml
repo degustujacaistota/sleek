@@ -43,6 +43,8 @@ collections:
     output: true
   locations:
     output: true
+  definitions:
+    output: true
 
 # PLUGINS
 plugins:
@@ -140,6 +142,7 @@ navigation:
   - {name: 'Tags', link: '/tags'}
   - {name: 'Locations', link: '/locations'}
   - {name: 'Restaurants', link: '/restaurants'}
+  - {name: 'Definitions', link: '/definitions'}
 
 # SOCIAL LINKS
 social_links:

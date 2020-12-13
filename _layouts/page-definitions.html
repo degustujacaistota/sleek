@@ -1,0 +1,20 @@
+---
+layout: page
+title: Definitions
+permalink: /definitions
+description: Definitions
+---
+
+<div class="posts archive-group">
+  <dl class="posts-nav">
+    {% assign definitions = site.definitions %}
+    {% for definition in definitions %}
+    <dt id="{{ definition.title }}">
+      <h2>{{ definition.title }}</h2>
+    </dt>
+    <dd>
+      {{ definition.description }}
+    </dd>
+    {% endfor %}
+  </dl>
+</div>
