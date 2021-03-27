@@ -7,6 +7,6 @@ layout: page
 {% for description in dictionary %}
 
 <h3 id="{{description.id}}">{{description.term}}</h3>
-<p>{{description.details}}</p>
+<p>{{description.details | markdownify}}</p>
 
 {% endfor %}
